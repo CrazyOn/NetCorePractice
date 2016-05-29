@@ -7,7 +7,7 @@ using Microsoft.Extensions.Options;
 
 namespace NetCorePractice.Configuration._1._0
 {
-    public class OptionConfiguration : IRun, IDisplayNone
+    public class OptionConfiguration : IRun
     {
         public void Run()
         {
@@ -31,10 +31,9 @@ namespace NetCorePractice.Configuration._1._0
             IConfiguration configuration = new ConfigurationBuilder()
                 .Add(new MemoryConfigurationSource { InitialData = source })
                 .Build().GetSection("Format");
-
             var optionsAccessor = new ServiceCollection()
                 .AddOptions()
-                //.Configure<OptionFormatSettings>()
+                .Configure<OptionFormatSettings>(configuration)
                 .BuildServiceProvider()
                 .GetService<IOptions<OptionFormatSettings>>();
 
@@ -52,27 +51,27 @@ namespace NetCorePractice.Configuration._1._0
         }
     }
 
-    public static class OptionBindExtensions
-    {
-        //public static IServiceCollection AddOptionsBind(this IServiceCollection services)
-        //{
-        //    return services.AddSingleton(typeof(IOptions<>), typeof(OptionsManager<>));
-        //}
+    //public static class OptionBindExtensions
+    //{
+    //    //public static IServiceCollection AddOptionsBind(this IServiceCollection services)
+    //    //{
+    //    //    return services.AddSingleton(typeof(IOptions<>), typeof(OptionsManager<>));
+    //    //}
 
-        //public static IServiceCollection ConfigureBind<TOptions>(this IServiceCollection services,
-        //    IConfiguration configuration)
-        //    where TOptions : class, new()
-        //{
-        //    return services.AddInstance<IConfigureOptions<TOptions>>(new ConfigureFromConfigurationOptionsBind<TOptions>(configuration));
-        //}
-    }
+    //    //public static IServiceCollection ConfigureBind<TOptions>(this IServiceCollection services,
+    //    //    IConfiguration configuration)
+    //    //    where TOptions : class, new()
+    //    //{
+    //    //    return services.AddInstance<IConfigureOptions<TOptions>>(new ConfigureFromConfigurationOptionsBind<TOptions>(configuration));
+    //    //}
+    //}
 
     //public class ConfigureFromConfigurationOptionsBind<TOptions> : ConfigureOptionsBind<TOptions> where TOptions : class, new()
     //{
     //    public ConfigureFromConfigurationOptionsBind(IConfiguration configuration)
     //        : base(configuration.Bind)
     //    {
-            
+
     //    }
     //}
 

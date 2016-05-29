@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace NetCorePractice.DI
 {
-    public class DiStart : IRun
+    public class DiStart : IRun, IDisplayNone
     {
         public void Run()
         {
