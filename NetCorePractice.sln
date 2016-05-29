@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{845493FA-820B-46A9-B6DF-149A4D44EF51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1F993E0E-F260-4191-9808-13350C1D6893}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NetCorePractice", "src\NetCorePractice\NetCorePractice.xproj", "{BFADFDFE-3B92-4FD0-B0DD-01837ED1E336}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFADFDFE-3B92-4FD0-B0DD-01837ED1E336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFADFDFE-3B92-4FD0-B0DD-01837ED1E336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFADFDFE-3B92-4FD0-B0DD-01837ED1E336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFADFDFE-3B92-4FD0-B0DD-01837ED1E336}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BFADFDFE-3B92-4FD0-B0DD-01837ED1E336} = {845493FA-820B-46A9-B6DF-149A4D44EF51}
+	EndGlobalSection
+EndGlobal
